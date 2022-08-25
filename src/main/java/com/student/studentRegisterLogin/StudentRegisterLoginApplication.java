@@ -8,6 +8,7 @@ public class StudentRegisterLoginApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(StudentRegisterLoginApplication.class, args);
+		System.out.println("My application is running on ");
 	}
 
 }
