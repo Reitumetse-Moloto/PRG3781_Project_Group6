@@ -1,4 +1,4 @@
-package com.student.studentRegisterLogin.email;
+/*package com.email;
 
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
@@ -38,3 +38,4 @@ public class EmailService implements EmailSender{
         }
     }
 }
+*/

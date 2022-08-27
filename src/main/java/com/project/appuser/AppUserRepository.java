@@ -1,4 +1,4 @@
-package com.student.studentRegisterLogin.appuser;
+package com.project.appuser;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
