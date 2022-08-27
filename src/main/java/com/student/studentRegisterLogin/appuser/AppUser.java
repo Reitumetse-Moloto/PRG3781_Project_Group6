@@ -56,7 +56,7 @@ public class AppUser implements UserDetails {
     }
 
     @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
+    public Collection<? extends GrantedAuthority> getAuthorities() {//returns the authorities of the user
         SimpleGrantedAuthority authority =
                 new SimpleGrantedAuthority(appUserRole.name());
         return Collections.singletonList(authority);
@@ -90,17 +90,17 @@ public class AppUser implements UserDetails {
     }
 
     @Override
-    public boolean isAccountNonLocked() {
+    public boolean isAccountNonLocked() {//if user is locked, he can't login
         return !locked;
     }
 
     @Override
-    public boolean isCredentialsNonExpired() {
+    public boolean isCredentialsNonExpired() {// credentials means password
         return true;
     }
 
     @Override
-    public boolean isEnabled() {
+    public boolean isEnabled() {// if user is enabled or not
         return enabled;
     }
 }

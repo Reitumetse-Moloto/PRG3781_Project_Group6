@@ -1,7 +1,6 @@
 package com.student.studentRegisterLogin.appuser;
 
-import com.example.demo.registration.token.ConfirmationToken;
-import com.example.demo.registration.token.ConfirmationTokenService;
+import com.student.studentRegisterLogin.registration.token.*;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -40,6 +39,7 @@ public class AppUserService implements UserDetailsService {
         if (userExists) {
             // TODO check of attributes are the same and
             // TODO if email not confirmed send confirmation email.
+                return "user already exists";
 
             throw new IllegalStateException("email already taken");
         }
