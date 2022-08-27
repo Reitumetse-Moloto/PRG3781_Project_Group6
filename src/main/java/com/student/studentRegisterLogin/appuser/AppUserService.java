@@ -1,4 +1,4 @@
-package com.example.demo.appuser;
+package com.student.studentRegisterLogin.appuser;
 
 import com.example.demo.registration.token.ConfirmationToken;
 import com.example.demo.registration.token.ConfirmationTokenService;

@@ -1,4 +1,4 @@
-package com.example.demo.registration;
+package com.student.studentRegisterLogin.registration;
 
 import com.example.demo.appuser.AppUser;
 import com.example.demo.appuser.AppUserRole;

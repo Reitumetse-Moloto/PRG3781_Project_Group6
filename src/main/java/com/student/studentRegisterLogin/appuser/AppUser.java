@@ -1,4 +1,4 @@
-package com.example.demo.appuser;
+package com.student.studentRegisterLogin.appuser;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
