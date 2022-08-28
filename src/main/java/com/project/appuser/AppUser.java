@@ -1,8 +1,6 @@
 package com.project.appuser;
-
 import java.util.Collection;
 import java.util.Collections;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -12,11 +10,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -39,8 +35,6 @@ public class AppUser implements UserDetails {
     @Id
     @GeneratedValue(
             strategy = GenerationType.IDENTITY
-
-            //generator = "student_sequence"
     )
     private Long id;
     
