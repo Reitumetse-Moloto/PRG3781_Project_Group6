@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Display Users</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/src/main/resources/templates/studentsstyle.css">
+</head>
+<body>
+<div class="container text-center">
+
+     
+    <div id="main">
+        <h1>View Students</h1>
+
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Student ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Address</th>
+                    <th>E-mail</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="Student: ${listUsers}">
+                    <td th:text="${Student.id}">Student ID</td>
+                    <td th:text="${Student.firstName}">First Name</td>
+                    <td th:text="${Student.lastname}">Last Name</td>
+                    <td th:text="${Student.address}">Last Name</td>
+                    <td th:text="${Student.email}">E-mail</td>
+                    <td th:text="${Student.password}">Password</td>   
+                </tr>
+            </tbody>
+        </table>
+
+        <div>
+            <form th:action="@{/logout}" method="post">
+                <button> <a href="/src/main/resources/templates/index.html"> Sign Out</a> </button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
