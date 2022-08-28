@@ -1,4 +1,4 @@
-package com.student.studentRegisterLogin.Security;
+package com.Security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

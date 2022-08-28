@@ -1,4 +1,4 @@
-package com.student.studentRegisterLogin.registration;
+package com.registration;
 
 import org.springframework.stereotype.Service;
 

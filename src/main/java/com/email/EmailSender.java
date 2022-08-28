@@ -1,4 +1,4 @@
-package com.student.studentRegisterLogin.email;
+package com.email;
 
 public interface EmailSender {
     void send(String to, String email);

@@ -1,8 +1,9 @@
-package com.student.studentRegisterLogin.appuser;
+package com.project.appuser;
+import com.registration.*;
 
-import com.student.studentRegisterLogin.appuser.*;
-import com.student.studentRegisterLogin.registration.RegistrationService;
-import com.student.studentRegisterLogin.registration.token.*;
+import com.project.appuser.*;
+import com.registration.RegistrationService;
+import com.registration.token.*;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -41,9 +42,9 @@ public class AppUserService implements UserDetailsService {
         if (userExists) {
             // TODO check of attributes are the same and
             // TODO if email not confirmed send confirmation email.
-                return "user already exists";
-
+            
             throw new IllegalStateException("email already taken");
+            //return "user already exists";
         }
 
         String encodedPassword = bCryptPasswordEncoder
@@ -61,10 +62,10 @@ public class AppUserService implements UserDetailsService {
                 LocalDateTime.now().plusMinutes(15),
                 appUser
         );
-
+        
         confirmationTokenService.saveConfirmationToken(
                 confirmationToken);
-
+        
 //        TODO: SEND EMAIL
 
         return token;
