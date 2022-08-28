@@ -28,9 +28,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name= "students")
-public class AppUser implements UserDetails {
-
-
+public class appRegister implements UserDetails{
     @SequenceGenerator(
             name = "student_sequence",
             sequenceName = "student_sequence",
@@ -42,15 +40,15 @@ public class AppUser implements UserDetails {
 
             //generator = "student_sequence"
     )
-    private Long id;
+    private Long registerId;
     
     @Column(nullable = false, unique = true, length = 45)
     private String email;
 
     @Column(nullable = false, length = 20)
-    private String firstName;
+    private String studentName;
     @Column(nullable = false, length = 20)
-    private String lastName;
+    private String courseName;
 
     @Column(nullable = false, length = 64)
     private String password;
@@ -62,70 +60,54 @@ public class AppUser implements UserDetails {
     private Boolean locked = false;
     private Boolean enabled = false;
 
-    public AppUser(String firstName,
-                   String lastName,
-                   String address,
-                   String email,
-                   String password,
+
+    public appRegister(String studentName,
+                    String address,
+                    String email,
+                    String password,
+                    String courseName,
         AppUserRole appUserRole) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.studentName = studentName;
+        this.courseName = courseName;
         this.address = address;
         this.email = email;
         this.password = password;
         this.appUserRole = appUserRole;
     }
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {//returns the authorities of the user
-        SimpleGrantedAuthority authority =
-                new SimpleGrantedAuthority(appUserRole.name());
-        return Collections.singletonList(authority);
-    }
 
     @Override
-    public String getPassword() {
-        return password;
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return null;
     }
+
 
     @Override
     public String getUsername() {
-        return email;
+        return null;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getAddress() {
-        return address;
-    }
 
     @Override
     public boolean isAccountNonExpired() {
-        return true;
+        return false;
     }
 
-    @Override
-    public boolean isAccountNonLocked() {//if user is locked, he can't login
-        return !locked;
-    }
 
     @Override
-    public boolean isCredentialsNonExpired() {// credentials means password
-        return true;
+    public boolean isAccountNonLocked() {
+        return false;
     }
 
+
     @Override
-    public boolean isEnabled() {// if user is enabled or not
-        return enabled;
+    public boolean isCredentialsNonExpired() {
+        return false;
+    }
+
+
+    @Override
+    public boolean isEnabled() {
+        return false;
     }
 }
-
-
-
-
