@@ -17,24 +17,24 @@ div{
         padding: 80px;  
         margin-top: 200px;
         background: rgb(254, 228, 228);  
-        border-radius: 15px ;
+        border-radius: 15px ; 
 }
-
 button{
-    width: 100px;  
-    height: 30px;  
+    width: 140px;  
+    height: 40px;  
     border: none;  
     border-radius: 17px;  
     padding-left: 7px;  
     color: black;  
-    background-color: rgb(173, 1, 75);
+    background-color: rgb(212, 18, 102);
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    
 }
 
 button:hover {
     background-color: white;
-}
-h1{
-    display: center;
-    justify-content: center;
-    align-items: center;
-}
+  }
