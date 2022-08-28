@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0e1538;
+}
+.box{
+    position: relative;
+    width: 500px;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0,0.5);
+    overflow: hidden;
+    border-radius: 20px;
+    font-size: 1em;
+    text-align: center;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 2000px;
+    background: linear-gradient(#00ccff,#d400d4) ;
+    animation: animate 4s linear infinite;
+}
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #0e1538;
+    border-radius: 16px;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.box h1{
+    position: relative;
+    color: #fff;
+    font-size: 4em;
+    z-index: 10;
+}
+h2{
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    z-index: 10;
+}
+form{
+    position: relative;
+    color: #fff;
+    font-size: 2em;
+    z-index: 10;
+}  
+#Uname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#Pass{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+#log{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: black;  
+    background-color: rgb(254, 255, 255);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+#log:hover{
+    background-color: #00ccff;
+}
+h4{  
+    text-align: center;  
+    padding: 10px;  
+    font-size: 2em;
+} 
+button{
+      text-align: center;
+}
+#back{
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: black;  
+    background-color: rgb(254, 255, 255);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+#back:hover{
+    background-color: #d400d4;
+}

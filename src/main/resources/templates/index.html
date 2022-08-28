@@ -6,20 +6,19 @@
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
     <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css">
 
     
 </head>
 <body>
-    <div class="container text-center">
+    <div class="box">
         <h1>Student Portal</h1>
         <form class="form-signin" action="/login" method="post">
             <h2 class="form-signin-heading">Please Login or Register</h2>
-            <h3><a th:href="/@{/users}">List of Users</a></h3>
-        <h3><a th:href="/@{/register}">Register</a></h3>
-        <h3><a th:href="/@{/login}">Login</a></h3>
+            <button id="view"><a href="/src/main/resources/templates/students.html" th:href="/@{/users}">View Students</a></button>
+            <button id="Register"><a href="/src/main/resources/templates/signup_form.html" th:href="/@{/register}">Register</a></button>
+            <button id="Login"><a href="/src/main/resources/templates/login_form.html" th:href="/@{/login}">Login</a></button>
         </form>
-
     </div>
-     
 </body>
 </html>
