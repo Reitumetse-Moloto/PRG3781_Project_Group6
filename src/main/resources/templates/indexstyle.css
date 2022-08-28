@@ -4,6 +4,9 @@ body
     padding: 0;  
     background-color: rgb(173, 1, 75);  
     font-family: 'Arial';  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 div{
@@ -14,8 +17,9 @@ div{
         padding: 80px;  
         margin-top: 200px;
         background: rgb(254, 228, 228);  
-        border-radius: 15px ; 
+        border-radius: 15px ;
 }
+
 button{
     width: 100px;  
     height: 30px;  
@@ -25,6 +29,12 @@ button{
     color: black;  
     background-color: rgb(173, 1, 75);
 }
+
 button:hover {
     background-color: white;
-  }
+}
+h1{
+    display: center;
+    justify-content: center;
+    align-items: center;
+}
