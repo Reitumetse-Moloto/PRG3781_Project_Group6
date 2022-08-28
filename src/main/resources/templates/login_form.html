@@ -9,7 +9,9 @@
 </head>
 <body>
     <div class="box">
-        <div class="container text-center">           
+        <div class="container text-center">
+            <h3>Successfully signed in!</h3>
+                
             <form id="login" method="get" action="login.php">   
                 <h4><a th:href="/@{/login}">Login Page</a></h4><br>  
                 <label><b>User Name     
@@ -23,7 +25,9 @@
                 <input type="Password" name="Pass" id="Pass" placeholder="Password">    
                 <br><br>    
                 <input type="button" name="log" id="log" value="Log In Here">       
-                <br><br>    
+                <br><br> 
+                <input type="button" id="back" value="Go back!" onclick="history.back()">   
+                <br><br>
                 <input type="checkbox" id="check">    
                 <span>Remember me</span>    
                 <br><br>    
