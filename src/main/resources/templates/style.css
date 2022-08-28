@@ -29,7 +29,7 @@ body{
     content: '';
     position: absolute;
     width: 400px;
-    height: 900px;
+    height: 2000px;
     background: linear-gradient(#00ccff,#d400d4) ;
     animation: animate 4s linear infinite;
 }

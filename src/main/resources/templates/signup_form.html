@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="/src/main/resources/templates/signupstyle.css">
 </head>
 <body>
-    <div class="container text-center">
-
+    <div class="box">
         <form th:action="@{/process_register}" th:object="${user}" method="post">
             <h1>User Registration (Sign Up)</h1>
         <div class="m-3">
@@ -57,9 +56,12 @@
             
             <div>
                 <button type="submit" class="btn btn-primary">Sign Up</button>
-            </div>
+                <br>
+                <input type="button" id="back" value="Go back!" onclick="history.back()">  
+            </div> 
         </div>
         </form>
     </div>
+
 </body>
 </html>

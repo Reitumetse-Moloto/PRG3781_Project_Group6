@@ -1,27 +1,81 @@
-body  
-{  
-    margin: 0;  
-    padding: 0;  
-    background-color: rgb(173, 1, 75);  
-    font-family: 'Arial';  
-} 
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0e1538;
+}
+.box{
+    position: relative;
+    width: 700px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0,0.5);
+    overflow: hidden;
+    border-radius: 20px;
+    font-size: 1em;
+    text-align: center;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 2000px;
+    background: linear-gradient(#00ccff,#d400d4) ;
+    animation: animate 4s linear infinite;
+}
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #0e1538;
+    border-radius: 16px;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.box h1{
+    position: relative;
+    color: #fff;
+    font-size: 2em;
+    z-index: 10;
+}
 form{
-    width: 382px;  
-        overflow: hidden;  
-        margin: auto;  
-        margin: 20 0 0 450px;  
-        padding: 80px;  
-        background: rgb(254, 228, 228);  
-        border-radius: 15px ;  
-        margin-top: 150px;
-        
-}
-h1{
-    font-size: 25px;
-}
-label{  
+    position: relative;
+    color: #fff;
+    font-size: 2em;
+    z-index: 10;
+}  
+
+#back{
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
     color: black;  
-    font-size: 17px;  
+    background-color: rgb(254, 255, 255);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+#back:hover{
+    background-color: #d400d4;
 } 
 input{
     width: 300px;  
@@ -31,16 +85,17 @@ input{
     padding-left: 8px;
 }
 button{
-    width: 100px;  
-    height: 40px;  
+    width: 300px;  
+    height: 30px;  
     border: none;  
     border-radius: 17px;  
     padding-left: 7px;  
     color: black;  
-    background-color: rgb(173, 1, 75);
-    margin-top: 10px;
+    background-color: rgb(254, 255, 255);
+    font-size: 15px;
     font-weight: bold;
+    text-align: center;
 }
 button:hover {
-    background-color: rgb(247, 105, 167);
+    background-color: #00ccff;
   }
