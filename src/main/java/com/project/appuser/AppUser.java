@@ -67,7 +67,7 @@ public class AppUser implements UserDetails {
                    String address,
                    String email,
                    String password,
-                   AppUserRole appUserRole) {
+        AppUserRole appUserRole) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
