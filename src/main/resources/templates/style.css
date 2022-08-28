@@ -1,36 +1,65 @@
-body  
-{  
-    margin: 0;  
-    padding: 0;  
-    background-color: rgb(173, 1, 75);  
-    font-family: 'Arial';  
-}  
-.login{  
-        width: 382px;  
-        overflow: hidden;  
-        margin: auto;  
-        margin: 20 0 0 450px;  
-        padding: 80px;  
-        background: rgb(254, 228, 228);  
-        border-radius: 15px ;  
-          
-} 
-
-h3{
-    text-align: center;
-    color: white;
-   
-
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
 }
-h4{  
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0e1538;
+}
+.box{
+    position: relative;
+    width: 500px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0,0.5);
+    overflow: hidden;
+    border-radius: 20px;
+    font-size: 1em;
     text-align: center;
-    color: black;  
-    padding: 10px;  
-    font-size: 25px;
-}  
-label{  
-    color: black;  
-    font-size: 17px;  
+}
+.box::before{
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 800px;
+    background: linear-gradient(#00ccff,#d400d4) ;
+    animation: animate 4s linear infinite;
+}
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #0e1538;
+    border-radius: 16px;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+h2{
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    z-index: 10;
+}
+form{
+    position: relative;
+    color: #fff;
+    font-size: 2em;
+    z-index: 10;
 }  
 #Uname{  
     width: 300px;  
@@ -54,18 +83,19 @@ label{
     border-radius: 17px;  
     padding-left: 7px;  
     color: black;  
-    background-color: rgb(173, 1, 75);
+    background-color: rgb(255, 254, 255);
     font-size: 15px;
     font-weight: bold;
-  
+    text-align: center;
 }
 #log:hover{
     background-color: rgb(247, 105, 167);
 }
-span{  
-    color: rgb(0, 0, 0);  
-    font-size: 17px;  
-}  
-a{
-    color: black;
+h4{  
+    text-align: center;  
+    padding: 10px;  
+    font-size: 2em;
+} 
+button{
+      text-align: center;
 }
