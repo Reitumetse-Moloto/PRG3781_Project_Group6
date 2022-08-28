@@ -14,7 +14,7 @@ body{
 }
 .box{
     position: relative;
-    width: 500px;
+    width: 600px;
     height: 750px;
     display: flex;
     justify-content: center;
@@ -36,9 +36,9 @@ body{
 .box::after {
     content: '';
     position: absolute;
-    inset: 4px;
+    inset: 20px;
     background: #0e1538;
-    border-radius: 16px;
+    border-radius: 10px;
 }
 @keyframes animate{
     0%{
