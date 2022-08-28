@@ -1,8 +1,4 @@
 package com.project.appuser;
-import com.registration.*;
-
-import com.project.appuser.*;
-import com.registration.RegistrationService;
 import com.registration.token.*;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
