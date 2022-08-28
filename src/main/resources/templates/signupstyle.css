@@ -40,7 +40,6 @@ button{
     background-color: rgb(173, 1, 75);
     margin-top: 10px;
     font-weight: bold;
-
 }
 button:hover {
     background-color: rgb(247, 105, 167);
